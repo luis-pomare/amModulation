@@ -29,6 +29,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         jSlider4 = new javax.swing.JSlider();
         jSlider5 = new javax.swing.JSlider();
         señales1 = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         addWindowListener(new java.awt.event.WindowAdapter() {
@@ -163,6 +164,14 @@ public class ventanaPrincipal extends javax.swing.JFrame {
             .addGap(0, 170, Short.MAX_VALUE)
         );
 
+        jButton1.setText("graficar");
+        jButton1.setActionCommand("graficar");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -181,7 +190,9 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                                 .addGroup(layout.createSequentialGroup()
                                     .addGap(6, 6, 6)
                                     .addComponent(jLabel5)))
-                            .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(60, 60, 60)
+                        .addComponent(jButton1))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(28, 28, 28)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -202,7 +213,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                                             .addComponent(jRadioButton1)
                                             .addComponent(jRadioButton2)
                                             .addComponent(jRadioButton3))))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 104, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 85, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(señales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(señales1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -246,10 +257,15 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jSlider3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(43, 43, 43)
-                        .addComponent(jLabel5)
-                        .addGap(13, 13, 13)
-                        .addComponent(jLabel6)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(43, 43, 43)
+                                .addComponent(jLabel5)
+                                .addGap(13, 13, 13)
+                                .addComponent(jLabel6))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGap(22, 22, 22)
+                                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jSlider4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(8, 8, 8)
@@ -286,11 +302,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1PropertyChange
 
     private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
-        plano p1= new plano(this.señales);
-        p1.dibujar();
-        plano p2= new plano(this.señales1);
-        p2.dibujar();
-        
+                
     }//GEN-LAST:event_jRadioButton1MouseClicked
 
     private void señalesComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_señalesComponentShown
@@ -314,18 +326,19 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowActivated
 
     private void jRadioButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
-        plano p1= new plano(this.señales);
-        p1.dibujar();
-        plano p2= new plano(this.señales1);
-        p2.dibujar();         // TODO add your handling code here:
+        // TODO add your handling code here:
     }//GEN-LAST:event_jRadioButton3MouseClicked
 
     private void jRadioButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jRadioButton2MouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         plano p1= new plano(this.señales);
         p1.dibujar();
         plano p2= new plano(this.señales1);
-        p2.dibujar();         // TODO add your handling code here:
-    }//GEN-LAST:event_jRadioButton2MouseClicked
+        p2.dibujar();         
+    }//GEN-LAST:event_jButton1MouseClicked
 
     /**
      * @param args the command line arguments
@@ -363,6 +376,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup buttonGroup1;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
