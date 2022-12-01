@@ -36,15 +36,21 @@ public class plano {
         }
         
         //Lineas del medio
-        g.setColor(Color.red);
         g.drawLine(w/2, 0, w/2,h );
         g.drawLine(0, h/2, w,h/2 );
+        
+        
+        dibujarPunto(3,3,"azul");
     }
     
-    public void dibujarPunto(int x, int y){
+    public void dibujarPunto(int x, int y, String color){
         Graphics2D g= (Graphics2D) p.getGraphics();
         int realX = w/2+x*escala;
         int realY = h/2-y*escala;
+        if("rojo".equals(color)){
+        g.setColor(Color.red);}
+        else{
+        g.setColor(Color.blue);}
         g.fillOval(realX-3, realY-3, 6, 6);
     }
 }
