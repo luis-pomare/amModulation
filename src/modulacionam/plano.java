@@ -7,7 +7,7 @@ public class plano {
     private JPanel p;
     private int w;
     private int h;
-    private int escala = 10;
+    private int escala = 7;
     
     
     public plano(JPanel p) {
@@ -40,16 +40,16 @@ public class plano {
         g.drawLine(0, h/2, w,h/2 );
     }
     
-    public void dibujarPunto(int x, int y, String color){
+    public void dibujarPunto(float x, float y, String color){
         Graphics2D g= (Graphics2D) p.getGraphics();
-        int realX = w/2+x*escala;
-        int realY = h/2-y*escala;
+        int realX = (int) (w/2+x*escala);
+        int realY = (int) (h/2-y*escala);
         
         if("rojo".equals(color)){
         g.setColor(Color.red);}
         else{
         g.setColor(Color.blue);}
         
-        g.fillOval(realX-3, realY-3, 6, 6);
+        g.fillOval(realX-2, realY-2, 4, 4);
     }
 }
