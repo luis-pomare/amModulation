@@ -1,7 +1,7 @@
 package modulacionam;
 
 public class ventanaPrincipal extends javax.swing.JFrame {
-
+    public String tipoModuladora = "seno";
     public ventanaPrincipal() {
         initComponents();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -305,7 +305,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jRadioButton1PropertyChange
 
     private void jRadioButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton1MouseClicked
-                
+        tipoModuladora = "seno";
     }//GEN-LAST:event_jRadioButton1MouseClicked
 
     private void señalesComponentShown(java.awt.event.ComponentEvent evt) {//GEN-FIRST:event_señalesComponentShown
@@ -329,20 +329,22 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowActivated
 
     private void jRadioButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
-        // TODO add your handling code here:
+        tipoModuladora = "cuadrada";
     }//GEN-LAST:event_jRadioButton3MouseClicked
 
     private void jRadioButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
-        // TODO add your handling code here:
+        tipoModuladora = "triangular";
     }//GEN-LAST:event_jRadioButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        plano p1= new plano(this.señales);
-        p1.dibujar();
-        plano p2= new plano(this.señales1);
-        p2.dibujar();
+        
+     plano p1= new plano(this.señales);
+     plano p2= new plano(this.señales1);
+     p1.dibujar();
+     p2.dibujar();
+        if(tipoModuladora=="seno"){
         imprimir.dibujar1(p1);
-        imprimir.dibujar2(p2);
+        imprimir.dibujar2(p2);}
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
