@@ -135,6 +135,8 @@ public class ventanaPrincipal extends javax.swing.JFrame {
 
         jSlider2.setMaximum(10);
         jSlider2.setMinimum(1);
+        jSlider2.setPaintTicks(true);
+        jSlider2.setSnapToTicks(true);
         jSlider2.setValue(1);
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
@@ -218,7 +220,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                                             .addComponent(jRadioButton1)
                                             .addComponent(jRadioButton2)
                                             .addComponent(jRadioButton3))))))))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 80, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 81, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(señales, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(señales1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -242,19 +244,19 @@ public class ventanaPrincipal extends javax.swing.JFrame {
                                 .addGap(2, 2, 2)
                                 .addComponent(jSlider1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(18, 18, 18)
-                                .addComponent(jLabel3))
+                                .addComponent(jLabel3)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(18, 18, 18)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addGroup(layout.createSequentialGroup()
                                         .addGap(39, 39, 39)
-                                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                            .addComponent(jSlider2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(jRadioButton2)))
+                                        .addComponent(jRadioButton2))
                                     .addComponent(jRadioButton3))))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 24, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(jLabel4)
-                        .addGap(32, 32, 32))
+                        .addGap(26, 26, 26))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(16, 16, 16)
                         .addComponent(señales, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -345,7 +347,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
      p1.dibujar();
      p2.dibujar();
         if(tipoModuladora=="seno"){
-        imprimir.seno(p1,jSlider3.getValue());}
+        imprimir.seno(p1,jSlider1.getValue(),jSlider2.getValue());}
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
