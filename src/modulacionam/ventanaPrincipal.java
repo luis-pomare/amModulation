@@ -343,17 +343,7 @@ public class ventanaPrincipal extends javax.swing.JFrame {
      p1.dibujar();
      p2.dibujar();
         if(tipoModuladora=="seno"){
-        imprimir.dibujar1(p1);}
-        else {
-            if(tipoModuladora=="triangular"){
-                imprimir.test2(p1);
-            }
-            else{
-                if(tipoModuladora=="cuadrada"){
-                    imprimir.test3(p1);
-                }
-            }
-        }
+        imprimir.seno(p1,jSlider3.getValue());}
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
