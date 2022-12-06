@@ -1,7 +1,7 @@
 package modulacionam;
 
 public class ventanaPrincipal extends javax.swing.JFrame {
-    public String tipoModuladora = "seno";
+    public String tipoModuladora = "sseno";
     public ventanaPrincipal() {
         initComponents();
         setDefaultCloseOperation(EXIT_ON_CLOSE);
@@ -343,8 +343,17 @@ public class ventanaPrincipal extends javax.swing.JFrame {
      p1.dibujar();
      p2.dibujar();
         if(tipoModuladora=="seno"){
-        imprimir.dibujar1(p1);
-        imprimir.dibujar2(p2);}
+        imprimir.dibujar1(p1);}
+        else {
+            if(tipoModuladora=="triangular"){
+                imprimir.test2(p1);
+            }
+            else{
+                if(tipoModuladora=="cuadrada"){
+                    imprimir.test3(p1);
+                }
+            }
+        }
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
