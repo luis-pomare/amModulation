@@ -52,4 +52,9 @@ public class plano {
         
         g.fillOval(realX-2, realY-2, 4, 4);
     }
+    
+    public void borrar(){
+        Graphics2D g= (Graphics2D) p.getGraphics();
+        g.clearRect(0, 0, w, h);
+    }
 }

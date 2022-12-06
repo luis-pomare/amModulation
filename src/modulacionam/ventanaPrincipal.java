@@ -340,6 +340,8 @@ public class ventanaPrincipal extends javax.swing.JFrame {
         
      plano p1= new plano(this.señales);
      plano p2= new plano(this.señales1);
+     p1.borrar();
+     p2.borrar();
      p1.dibujar();
      p2.dibujar();
         if(tipoModuladora=="seno"){
