@@ -331,11 +331,11 @@ public class ventanaPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowActivated
 
     private void jRadioButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton3MouseClicked
-        tipoModuladora = "cuadrada";
+        tipoModuladora = "triangular";
     }//GEN-LAST:event_jRadioButton3MouseClicked
 
     private void jRadioButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jRadioButton2MouseClicked
-        tipoModuladora = "triangular";
+        tipoModuladora = "cuadrada";
     }//GEN-LAST:event_jRadioButton2MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
@@ -348,6 +348,8 @@ public class ventanaPrincipal extends javax.swing.JFrame {
      p2.dibujar();
         if(tipoModuladora=="seno"){
         imprimir.seno(p1,jSlider1.getValue(),jSlider2.getValue());}
+        if(tipoModuladora=="cuadrada"){
+        imprimir.cuadrada(p1,jSlider1.getValue(),jSlider2.getValue());}
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
