@@ -22,6 +22,14 @@ import javax.swing.JTabbedPane;
 import javax.swing.UIManager;
 
 public class AModulation01 implements TriggerListener {
+    
+  
+  public static void main(String[] args) {
+    try {
+      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
+    } catch (ClassNotFoundException|InstantiationException|IllegalAccessException|javax.swing.UnsupportedLookAndFeelException classNotFoundException) {}
+    AModulation01 app = new AModulation01();
+  }
   AM modulator;
   
   SineWave sine;
@@ -73,13 +81,6 @@ public class AModulation01 implements TriggerListener {
     view.pack();
     view.setDefaultCloseOperation(3);
     view.setVisible(true);
-  }
-  
-  public static void main(String[] args) {
-    try {
-      UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
-    } catch (ClassNotFoundException|InstantiationException|IllegalAccessException|javax.swing.UnsupportedLookAndFeelException classNotFoundException) {}
-    AModulation01 app = new AModulation01();
   }
   
   public void step(int triggerID, double... values) {
