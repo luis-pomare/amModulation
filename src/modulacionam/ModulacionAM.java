@@ -38,7 +38,7 @@ public class ModulacionAM implements TriggerListener {
   
   SLabsTimer timer;
   
-  ControlPanel controlPanel;
+  VentanaPrincipal controlPanel;
   
   public ModulacionAM() {
     this.modulator = new AM(1.0D, 10.0D, 0.0D, 0.8D);
@@ -57,7 +57,7 @@ public class ModulacionAM implements TriggerListener {
     this.analizer.setCurveColor(0, Color.BLUE);
     this.timer = new SLabsTimer(this, 10L);
     VentanaPpal toolBar = new VentanaPpal(this.timer);
-    this.controlPanel = new ControlPanel(this.modulator, this.sine, this.sawtooth, this.pulses);
+    this.controlPanel = new VentanaPrincipal(this.modulator, this.sine, this.sawtooth, this.pulses);
     JTabbedPane tabbedPane = new JTabbedPane();
     JPanel panelScope = new JPanel();
     panelScope.setLayout(new FlowLayout());

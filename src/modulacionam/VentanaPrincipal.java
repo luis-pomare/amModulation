@@ -17,7 +17,7 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.LayoutStyle;
 
-public class ControlPanel extends JPanel {
+public class VentanaPrincipal extends JPanel {
   AM modulator;
   
   SineWave sine;
@@ -84,7 +84,7 @@ public class ControlPanel extends JPanel {
   
   private JTextField jTextSinePhase;
   
-  public ControlPanel(AM modulator, SineWave sine, SawTooth sawtooth, PulseTrain pulses) {
+  public VentanaPrincipal(AM modulator, SineWave sine, SawTooth sawtooth, PulseTrain pulses) {
     this.modulator = modulator;
     this.sine = sine;
     this.sawtooth = sawtooth;
@@ -128,21 +128,21 @@ public class ControlPanel extends JPanel {
     this.jTextM.setText(Double.toString(this.modulator.getModulationIndex()));
     this.jTextM.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setM(evt);
+            VentanaPrincipal.this.setM(evt);
           }
         });
     this.jTextAc.setHorizontalAlignment(11);
     this.jTextAc.setText(Double.toString(this.modulator.getAmplitud()));
     this.jTextAc.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setAc(evt);
+            VentanaPrincipal.this.setAc(evt);
           }
         });
     this.jTextFc.setHorizontalAlignment(11);
     this.jTextFc.setText(Double.toString(this.modulator.getFrequency()));
     this.jTextFc.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setFc(evt);
+            VentanaPrincipal.this.setFc(evt);
           }
         });
     this.jLabel1.setText("m:");
@@ -193,21 +193,21 @@ public class ControlPanel extends JPanel {
     this.jTextSineA.setText(Double.toString(this.sine.getAmplitude()));
     this.jTextSineA.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setSineA(evt);
+            VentanaPrincipal.this.setSineA(evt);
           }
         });
     this.jTextSineFo.setHorizontalAlignment(4);
     this.jTextSineFo.setText(Double.toString(this.sine.getFrequency()));
     this.jTextSineFo.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setSineFo(evt);
+            VentanaPrincipal.this.setSineFo(evt);
           }
         });
     this.jTextSinePhase.setHorizontalAlignment(4);
     this.jTextSinePhase.setText(Double.toString(this.sine.getPhase()));
     this.jTextSinePhase.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setSinePhase(evt);
+            VentanaPrincipal.this.setSinePhase(evt);
           }
         });
     this.jLabel5.setText("A:");
@@ -250,14 +250,14 @@ public class ControlPanel extends JPanel {
     this.jTextSawA.setText(Double.toString(this.sawtooth.getAmplitude()));
     this.jTextSawA.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setSawA(evt);
+            VentanaPrincipal.this.setSawA(evt);
           }
         });
     this.jTextSawTo.setHorizontalAlignment(4);
     this.jTextSawTo.setText(Double.toString(this.sawtooth.getPeriod()));
     this.jTextSawTo.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setSawTo(evt);
+            VentanaPrincipal.this.setSawTo(evt);
           }
         });
     this.jLabel8.setText("A:");
@@ -292,21 +292,21 @@ public class ControlPanel extends JPanel {
     this.jTextPulsesA.setText(Double.toString(this.pulses.getAmplitude()));
     this.jTextPulsesA.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setPulsesA(evt);
+            VentanaPrincipal.this.setPulsesA(evt);
           }
         });
     this.jTextPulsesTo.setHorizontalAlignment(4);
     this.jTextPulsesTo.setText(Double.toString(this.pulses.getPeriod()));
     this.jTextPulsesTo.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setPulsesTo(evt);
+            VentanaPrincipal.this.setPulsesTo(evt);
           }
         });
     this.jTextPulsesTau.setHorizontalAlignment(4);
     this.jTextPulsesTau.setText(Double.toString(this.pulses.getTau()));
     this.jTextPulsesTau.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            ControlPanel.this.setPulsesTau(evt);
+            VentanaPrincipal.this.setPulsesTau(evt);
           }
         });
     this.jLabel10.setText("A:");
