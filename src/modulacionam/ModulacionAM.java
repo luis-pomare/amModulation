@@ -24,7 +24,7 @@ public class ModulacionAM implements TriggerListener {
         try {
       UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     } catch (ClassNotFoundException|InstantiationException|IllegalAccessException|javax.swing.UnsupportedLookAndFeelException classNotFoundException) {}
-    AModulation01 app = new AModulation01();
+    ModulacionAM app = new ModulacionAM();
     }
     AM modulator;
   
