@@ -6,7 +6,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class PlaybackBar extends JPanel {
+public class VentanaPpal extends JPanel {
   SLabsTimer timer;
   
   private JButton jButtonPause;
@@ -15,7 +15,7 @@ public class PlaybackBar extends JPanel {
   
   private JButton jButtonStop;
   
-  public PlaybackBar(SLabsTimer timer) {
+  public VentanaPpal(SLabsTimer timer) {
     initComponents();
     this.timer = timer;
   }
@@ -28,7 +28,7 @@ public class PlaybackBar extends JPanel {
     this.jButtonPlay.setText("Play");
     this.jButtonPlay.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            PlaybackBar.this.play(evt);
+            VentanaPpal.this.play(evt);
           }
         });
     add(this.jButtonPlay);
@@ -36,7 +36,7 @@ public class PlaybackBar extends JPanel {
     this.jButtonStop.setEnabled(false);
     this.jButtonStop.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            PlaybackBar.this.stop(evt);
+            VentanaPpal.this.stop(evt);
           }
         });
     add(this.jButtonStop);
@@ -44,7 +44,7 @@ public class PlaybackBar extends JPanel {
     this.jButtonPause.setEnabled(false);
     this.jButtonPause.addActionListener(new ActionListener() {
           public void actionPerformed(ActionEvent evt) {
-            PlaybackBar.this.pause(evt);
+            VentanaPpal.this.pause(evt);
           }
         });
     add(this.jButtonPause);

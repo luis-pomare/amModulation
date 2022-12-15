@@ -19,8 +19,6 @@ import javax.swing.UIManager;
 
 public class ModulacionAM implements TriggerListener {
     public static void main(String[] args) {
-        /*ventanaPrincipal modulador = new ventanaPrincipal();
-        modulador.setVisible(true);*/
         try {
       UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
     } catch (ClassNotFoundException|InstantiationException|IllegalAccessException|javax.swing.UnsupportedLookAndFeelException classNotFoundException) {}
@@ -58,7 +56,7 @@ public class ModulacionAM implements TriggerListener {
     this.analizer.setFFTLength(512);
     this.analizer.setCurveColor(0, Color.BLUE);
     this.timer = new SLabsTimer(this, 10L);
-    PlaybackBar toolBar = new PlaybackBar(this.timer);
+    VentanaPpal toolBar = new VentanaPpal(this.timer);
     this.controlPanel = new ControlPanel(this.modulator, this.sine, this.sawtooth, this.pulses);
     JTabbedPane tabbedPane = new JTabbedPane();
     JPanel panelScope = new JPanel();
