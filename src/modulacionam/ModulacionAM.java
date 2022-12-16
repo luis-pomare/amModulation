@@ -48,7 +48,7 @@ public class ModulacionAM implements TriggerListener {
     this.scope = new Scope();
     this.scope.setVoltsDivision(1.0D);
     this.scope.setTimeDivision(0.5D);
-    this.scope.setCurveColor(0, Color.BLUE);
+    this.scope.setCurveColor(0, Color.red);
     this.scope.setCurveOffset(0, 2.0D);
     this.scope.setCurveOffset(1, -2.0D);
     this.analizer = new FFTScope();
@@ -77,17 +77,21 @@ public class ModulacionAM implements TriggerListener {
     view.setVisible(true);
   }
   
-  public void step(int triggerID, double... values) {
+    /**
+     *
+     * @param triggerID
+     * @param values
+     */
+    @Override
+    public void step(int triggerID, double... values) {
     double x;
     int signal = this.controlPanel.getSignal();
     double t = values[0];
-    if (signal == 0) {
-      x = this.sine.output(t);
-    } else if (signal == 1) {
-      x = this.sawtooth.output(t);
-    } else {
-      x = this.pulses.output(t);
-    } 
+    x = switch (signal) {
+            case 0 -> this.sine.output(t);
+            case 1 -> this.sawtooth.output(t);
+            default -> this.pulses.output(t);
+        };
     double xc = this.modulator.output(t, x);
     this.scope.add(0, t, x);
     this.scope.add(1, t, xc);

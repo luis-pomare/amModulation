@@ -2,7 +2,6 @@ package modulacionam;
 import com.slabs.SLabsTimer;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
@@ -26,27 +25,15 @@ public class VentanaPpal extends JPanel {
     this.jButtonPause = new JButton();
     setLayout(new FlowLayout(0));
     this.jButtonPlay.setText("Play");
-    this.jButtonPlay.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent evt) {
-            VentanaPpal.this.play(evt);
-          }
-        });
+    this.jButtonPlay.addActionListener(VentanaPpal.this::play);
     add(this.jButtonPlay);
     this.jButtonStop.setText("Stop");
     this.jButtonStop.setEnabled(false);
-    this.jButtonStop.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent evt) {
-            VentanaPpal.this.stop(evt);
-          }
-        });
+    this.jButtonStop.addActionListener(VentanaPpal.this::stop);
     add(this.jButtonStop);
     this.jButtonPause.setText("Pause");
     this.jButtonPause.setEnabled(false);
-    this.jButtonPause.addActionListener(new ActionListener() {
-          public void actionPerformed(ActionEvent evt) {
-            VentanaPpal.this.pause(evt);
-          }
-        });
+    this.jButtonPause.addActionListener(VentanaPpal.this::pause);
     add(this.jButtonPause);
   }
   
