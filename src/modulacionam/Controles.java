@@ -5,7 +5,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JPanel;
 
-public class VentanaPpal extends JPanel {
+public class Controles extends JPanel {
   SLabsTimer timer;
   
   private JButton jButtonPause;
@@ -14,7 +14,7 @@ public class VentanaPpal extends JPanel {
   
   private JButton jButtonStop;
   
-  public VentanaPpal(SLabsTimer timer) {
+  public Controles(SLabsTimer timer) {
     initComponents();
     this.timer = timer;
   }
@@ -25,15 +25,15 @@ public class VentanaPpal extends JPanel {
     this.jButtonPause = new JButton();
     setLayout(new FlowLayout(0));
     this.jButtonPlay.setText("Play");
-    this.jButtonPlay.addActionListener(VentanaPpal.this::play);
+    this.jButtonPlay.addActionListener(Controles.this::play);
     add(this.jButtonPlay);
     this.jButtonStop.setText("Stop");
     this.jButtonStop.setEnabled(false);
-    this.jButtonStop.addActionListener(VentanaPpal.this::stop);
+    this.jButtonStop.addActionListener(Controles.this::stop);
     add(this.jButtonStop);
     this.jButtonPause.setText("Pause");
     this.jButtonPause.setEnabled(false);
-    this.jButtonPause.addActionListener(VentanaPpal.this::pause);
+    this.jButtonPause.addActionListener(Controles.this::pause);
     add(this.jButtonPause);
   }
   

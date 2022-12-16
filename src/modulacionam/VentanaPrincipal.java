@@ -146,10 +146,10 @@ public class VentanaPrincipal extends JPanel {
             VentanaPrincipal.this.setFc(evt);
           }
         });
-    this.jLabel1.setText("m:");
-    this.jLabel2.setText("Ac:");
-    this.jLabel3.setText("Fc:");
-    this.jComboSignal.setModel(new DefaultComboBoxModel<>(new String[] { "Sine wave", "Sawtooth", "Pulse train" }));
+    this.jLabel1.setText("Ind. modulacion:");
+    this.jLabel2.setText("Amplitud");
+    this.jLabel3.setText("Frecuencia:");
+    this.jComboSignal.setModel(new DefaultComboBoxModel<>(new String[] { "Seno", "Triangular", "Cuadrada" }));
     this.jLabel4.setText("x(t)=");
     GroupLayout jPanel1Layout = new GroupLayout(this.jPanel1);
     this.jPanel1.setLayout(jPanel1Layout);
