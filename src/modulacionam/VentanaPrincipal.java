@@ -123,7 +123,7 @@ public class VentanaPrincipal extends JPanel {
     this.jLabel11 = new JLabel();
     this.jLabel12 = new JLabel();
     setLayout(new BorderLayout());
-    this.jTabbedPane1.setBorder(BorderFactory.createTitledBorder("Parameters"));
+    this.jTabbedPane1.setBorder(BorderFactory.createTitledBorder("Configuracion"));
     this.jTextM.setHorizontalAlignment(11);
     this.jTextM.setText(Double.toString(this.modulator.getModulationIndex()));
     this.jTextM.addActionListener(new ActionListener() {
@@ -188,7 +188,7 @@ public class VentanaPrincipal extends JPanel {
             .addComponent(this.jComboSignal, -2, -1, -2)
             .addComponent(this.jLabel4))
           .addContainerGap(60, 32767)));
-    this.jTabbedPane1.addTab("Modulation", this.jPanel1);
+    this.jTabbedPane1.addTab("", this.jPanel1);
     this.jTextSineA.setHorizontalAlignment(4);
     this.jTextSineA.setText(Double.toString(this.sine.getAmplitude()));
     this.jTextSineA.addActionListener(new ActionListener() {
@@ -245,7 +245,6 @@ public class VentanaPrincipal extends JPanel {
             .addComponent(this.jTextSinePhase, -2, -1, -2)
             .addComponent(this.jLabel7))
           .addContainerGap(91, 32767)));
-    this.jTabbedPane1.addTab("Sine wave", this.jPanel2);
     this.jTextSawA.setHorizontalAlignment(4);
     this.jTextSawA.setText(Double.toString(this.sawtooth.getAmplitude()));
     this.jTextSawA.addActionListener(new ActionListener() {
@@ -287,7 +286,6 @@ public class VentanaPrincipal extends JPanel {
             .addComponent(this.jTextSawTo, -2, -1, -2)
             .addComponent(this.jLabel9))
           .addContainerGap(124, 32767)));
-    this.jTabbedPane1.addTab("Sawtooth", this.jPanel3);
     this.jTextPulsesA.setHorizontalAlignment(4);
     this.jTextPulsesA.setText(Double.toString(this.pulses.getAmplitude()));
     this.jTextPulsesA.addActionListener(new ActionListener() {
@@ -343,7 +341,6 @@ public class VentanaPrincipal extends JPanel {
             .addComponent(this.jTextPulsesTau, -2, -1, -2)
             .addComponent(this.jLabel12))
           .addContainerGap(91, 32767)));
-    this.jTabbedPane1.addTab("Pulse train", this.jPanel4);
     add(this.jTabbedPane1, "Center");
   }
   
