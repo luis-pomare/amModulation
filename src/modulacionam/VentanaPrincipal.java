@@ -93,6 +93,7 @@ public class VentanaPrincipal extends JPanel {
   }
   
   private void initComponents() {
+            
     this.jTabbedPane1 = new JTabbedPane();
     this.jPanel1 = new JPanel();
     this.jTextM = new JTextField();
