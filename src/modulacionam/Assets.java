@@ -340,16 +340,7 @@ public class Assets extends javax.swing.JFrame {
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
         
-     plano p1= new plano(this.señales);
-     plano p2= new plano(this.señales1);
-     p1.borrar();
-     p2.borrar();
-     p1.dibujar();
-     p2.dibujar();
-        if(tipoModuladora=="seno"){
-        imprimir.seno(p1,jSlider1.getValue(),jSlider2.getValue());}
-        if(tipoModuladora=="cuadrada"){
-        imprimir.cuadrada(p1,jSlider1.getValue(),jSlider2.getValue());}
+    
     }//GEN-LAST:event_jButton1MouseClicked
 
     /**
